@@ -1,4 +1,3 @@
-# source: https://www.worlddancesport.org/Rule/Competition/General/Regulations-World-Ranking-Tournaments
 grandSlamTable = {
     1: 400,
     2: 380,
@@ -397,7 +396,6 @@ openTable = {
     96: 5,
     97: 2,
 }
-
 
 
 def determine_number_of_couples_modifier(n):
