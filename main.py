@@ -98,14 +98,22 @@ def calculate_table(base_table, modifiers, numer_of_couples):
 
 
 if __name__ == '__main__':
-    compType = 2
-    numberOfCouples = 21
-    numberOfCouplesTop12 = 0
-    numberOfCouplesTop24 = 0
-    numberOfCouplesTop36 = 1
-    coupleCountries = 6
-    numberOfJudges = 11
-    judgeCountries = 10
+    print("Type of competition (0 = Grand Slam, 1 = World Open, 2 = International Open, 3 = WDSF Open):")
+    compType = int(input())
+    print("Number of couples:")
+    numberOfCouples = int(input())
+    print("Number of couples from top 12:")
+    numberOfCouplesTop12 = int(input())
+    print("Number of couples from top 24:")
+    numberOfCouplesTop24 = int(input())
+    print("Number of couples from top 36:")
+    numberOfCouplesTop36 = int(input())
+    print("Number of countries of couples:")
+    coupleCountries = int(input())
+    print("Number of judges:")
+    numberOfJudges = int(input())
+    print("Number of counties of judges:")
+    judgeCountries = int(input())
     
     modifierList = [determine_number_of_couples_modifier(numberOfCouples),
                     determine_top_12_modifier(numberOfCouplesTop12),
