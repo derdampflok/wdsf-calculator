@@ -82,8 +82,19 @@ def get_base_table_for_comp_type(comp_type):
     return openTable
 
 
-def apply_modifiers(base_table, modifiers):
-    return 0
+def calculate_table(base_table, modifiers, numer_of_couples):
+    result = {}
+
+    for i in range(numer_of_couples):
+        base_points = base_table.get(i + 1)
+        if base_points is None:
+            base_points = base_table.get(len(base_table))
+        additional_points = 0
+        for modifier in modifiers:
+            additional_points += base_points * (modifier / 100)
+        result[i + 1] = base_points + additional_points
+
+    return result
 
 
 if __name__ == '__main__':
@@ -105,4 +116,6 @@ if __name__ == '__main__':
 
     baseTable = get_base_table_for_comp_type(compType)
 
-    pointsTable = apply_modifiers(baseTable, modifierList)
+    pointsTable = calculate_table(baseTable, modifierList, numberOfCouples)
+    for key in pointsTable.keys():
+        print(str(key) + ": " + str(pointsTable[key]))
