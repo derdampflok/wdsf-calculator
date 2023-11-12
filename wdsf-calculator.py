@@ -402,30 +402,29 @@ def determine_number_of_couples_modifier(n):
 
     if n < 7:
         return -30
-    elif n < 12:
+    if n < 12:
         return -20
-    elif n < 24:
+    if n < 24:
         return -10
-    elif n < 36:
+    if n < 36:
         return 0
-    elif 36 <= n < 48:
+    if n < 48:
         return 10
-    elif n < 96:
+    if n < 96:
         return 25
-    elif n < 144:
+    if n < 144:
         return 30
-    elif n < 192:
+    if n < 192:
         return 35
-    elif n < 288:
+    if n < 288:
         return 40
-    else:
-        return 50
+    return 50
 
 
 def determine_top_12_modifier(n):
     if n > 9:
         return 70
-    elif n > 6:
+    if n > 6:
         return 50
     return 0
 
