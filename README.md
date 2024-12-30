@@ -1,3 +1,5 @@
+# !!!OUTDATED!!!
+
 ## WDSF points calculator
 
 ### Source values for calculation formula
